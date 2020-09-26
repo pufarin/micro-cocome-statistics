@@ -1,0 +1,524 @@
+2020-09-26 10:34:36,872 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2020-09-26 10:34:36,924 INFO o.a.j.JMeter: Loading user properties from: /home/gabrielkovacs/jmeter/apache-jmeter-5.3/bin/user.properties
+2020-09-26 10:34:36,924 INFO o.a.j.JMeter: Loading system properties from: /home/gabrielkovacs/jmeter/apache-jmeter-5.3/bin/system.properties
+2020-09-26 10:34:36,926 INFO o.a.j.JMeter: Copyright (c) 1998-2020 The Apache Software Foundation
+2020-09-26 10:34:36,926 INFO o.a.j.JMeter: Version 5.3
+2020-09-26 10:34:36,927 INFO o.a.j.JMeter: java.version=11.0.8
+2020-09-26 10:34:36,927 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2020-09-26 10:34:36,927 INFO o.a.j.JMeter: os.name=Linux
+2020-09-26 10:34:36,927 INFO o.a.j.JMeter: os.arch=amd64
+2020-09-26 10:34:36,927 INFO o.a.j.JMeter: os.version=5.3.0-59-generic
+2020-09-26 10:34:36,928 INFO o.a.j.JMeter: file.encoding=UTF-8
+2020-09-26 10:34:36,928 INFO o.a.j.JMeter: java.awt.headless=true
+2020-09-26 10:34:36,928 INFO o.a.j.JMeter: Max memory     =4198498304
+2020-09-26 10:34:36,928 INFO o.a.j.JMeter: Available Processors =2
+2020-09-26 10:34:36,943 INFO o.a.j.JMeter: Default Locale=English (United States)
+2020-09-26 10:34:36,943 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2020-09-26 10:34:36,943 INFO o.a.j.JMeter: JMeterHome=/home/gabrielkovacs/jmeter/apache-jmeter-5.3
+2020-09-26 10:34:36,944 INFO o.a.j.JMeter: user.dir  =/home/gabrielkovacs/jmeter/orchestrate_pub_sub_1_to_1_db
+2020-09-26 10:34:36,944 INFO o.a.j.JMeter: PWD       =/home/gabrielkovacs/jmeter/orchestrate_pub_sub_1_to_1_db
+2020-09-26 10:34:36,944 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: swa-gabrielkovacs FullName: swa-gabrielkovacs
+2020-09-26 10:34:36,961 INFO o.a.j.s.FileServer: Default base='/home/gabrielkovacs/jmeter/orchestrate_pub_sub_1_to_1_db'
+2020-09-26 10:34:36,965 INFO o.a.j.s.FileServer: Set new base='/home/gabrielkovacs/jmeter/orchestrate_pub_sub_1_to_1_db'
+2020-09-26 10:34:37,252 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-09-26 10:34:37,290 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-09-26 10:34:37,297 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-09-26 10:34:37,304 INFO o.a.j.s.SaveService: Loading file: SR_OP&ROP_DR_30_30_30.jmx
+2020-09-26 10:34:37,379 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-09-26 10:34:37,379 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-09-26 10:34:37,380 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-09-26 10:34:37,380 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-09-26 10:34:37,380 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-09-26 10:34:37,380 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-09-26 10:34:37,456 INFO o.a.j.JMeter: Creating summariser <summary>
+2020-09-26 10:34:37,474 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-09-26 10:34:37,479 INFO o.a.j.s.SampleEvent: List of sample_variables: [uuid]
+2020-09-26 10:34:37,480 INFO o.a.j.s.SampleEvent: List of sample_variables: [uuid]
+2020-09-26 10:34:37,494 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-09-26 10:34:37,494 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-09-26 10:34:38,271 INFO o.a.j.JMeter: Running test (1601109278271)
+2020-09-26 10:34:38,339 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : UC5
+2020-09-26 10:34:38,339 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group UC5.
+2020-09-26 10:34:38,339 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-09-26 10:34:38,340 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=30 ramp-up=30 delayedStart=false
+2020-09-26 10:34:38,404 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-09-26 10:34:38,404 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : UC7
+2020-09-26 10:34:38,404 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group UC7.
+2020-09-26 10:34:38,404 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-09-26 10:34:38,404 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=30 ramp-up=30 delayedStart=false
+2020-09-26 10:34:38,422 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-1
+2020-09-26 10:34:38,428 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-1
+2020-09-26 10:34:38,460 INFO o.a.j.p.h.s.HTTPJavaImpl: Maximum connection retries = 0
+2020-09-26 10:34:38,462 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-09-26 10:34:38,462 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-09-26 10:34:38,462 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-09-26 10:34:38,462 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-09-26 10:34:38,499 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2020-09-26 10:34:38,499 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : UC3
+2020-09-26 10:34:38,500 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group UC3.
+2020-09-26 10:34:38,500 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-09-26 10:34:38,500 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=30 ramp-up=30 delayedStart=false
+2020-09-26 10:34:38,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-1
+2020-09-26 10:34:38,540 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2020-09-26 10:34:38,540 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : UC4
+2020-09-26 10:34:38,540 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group UC4.
+2020-09-26 10:34:38,540 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-09-26 10:34:38,540 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=30 ramp-up=30 delayedStart=false
+2020-09-26 10:34:38,544 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-1
+2020-09-26 10:34:38,578 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2020-09-26 10:34:38,578 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : UC6
+2020-09-26 10:34:38,579 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group UC6.
+2020-09-26 10:34:38,579 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-09-26 10:34:38,579 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=30 ramp-up=30 delayedStart=false
+2020-09-26 10:34:38,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-1
+2020-09-26 10:34:38,623 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2020-09-26 10:34:38,624 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-09-26 10:34:39,416 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-2
+2020-09-26 10:34:39,436 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-2
+2020-09-26 10:34:39,518 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-2
+2020-09-26 10:34:39,543 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-2
+2020-09-26 10:34:39,582 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-2
+2020-09-26 10:34:40,162 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-1
+2020-09-26 10:34:40,162 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-1
+2020-09-26 10:34:40,204 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-1
+2020-09-26 10:34:40,205 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-1
+2020-09-26 10:34:40,208 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-1
+2020-09-26 10:34:40,208 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-1
+2020-09-26 10:34:40,412 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-3
+2020-09-26 10:34:40,424 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-3
+2020-09-26 10:34:40,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-3
+2020-09-26 10:34:40,542 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-3
+2020-09-26 10:34:40,581 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-3
+2020-09-26 10:34:40,843 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-1
+2020-09-26 10:34:40,843 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-1
+2020-09-26 10:34:40,853 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-1
+2020-09-26 10:34:40,854 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-1
+2020-09-26 10:34:41,412 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-4
+2020-09-26 10:34:41,428 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-4
+2020-09-26 10:34:41,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-4
+2020-09-26 10:34:41,543 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-4
+2020-09-26 10:34:41,593 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-4
+2020-09-26 10:34:42,392 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-2
+2020-09-26 10:34:42,392 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-2
+2020-09-26 10:34:42,410 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-5
+2020-09-26 10:34:42,437 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-5
+2020-09-26 10:34:42,504 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-5
+2020-09-26 10:34:42,559 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-5
+2020-09-26 10:34:42,585 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-5
+2020-09-26 10:34:42,797 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-2
+2020-09-26 10:34:42,797 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-2
+2020-09-26 10:34:42,914 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-2
+2020-09-26 10:34:42,914 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-2
+2020-09-26 10:34:43,176 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-2
+2020-09-26 10:34:43,176 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-2
+2020-09-26 10:34:43,409 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-6
+2020-09-26 10:34:43,419 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-6
+2020-09-26 10:34:43,457 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-2
+2020-09-26 10:34:43,457 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-2
+2020-09-26 10:34:43,505 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-6
+2020-09-26 10:34:43,542 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-6
+2020-09-26 10:34:43,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-6
+2020-09-26 10:34:44,173 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-3
+2020-09-26 10:34:44,173 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-3
+2020-09-26 10:34:44,405 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-7
+2020-09-26 10:34:44,419 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-7
+2020-09-26 10:34:44,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-7
+2020-09-26 10:34:44,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-7
+2020-09-26 10:34:44,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-7
+2020-09-26 10:34:44,639 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-3
+2020-09-26 10:34:44,639 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-3
+2020-09-26 10:34:44,709 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-3
+2020-09-26 10:34:44,709 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-3
+2020-09-26 10:34:45,402 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-3
+2020-09-26 10:34:45,403 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-3
+2020-09-26 10:34:45,405 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-8
+2020-09-26 10:34:45,421 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-8
+2020-09-26 10:34:45,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-8
+2020-09-26 10:34:45,521 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-3
+2020-09-26 10:34:45,521 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-3
+2020-09-26 10:34:45,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-8
+2020-09-26 10:34:45,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-8
+2020-09-26 10:34:46,162 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-4
+2020-09-26 10:34:46,163 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-4
+2020-09-26 10:34:46,402 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-9
+2020-09-26 10:34:46,407 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-9
+2020-09-26 10:34:46,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-9
+2020-09-26 10:34:46,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-9
+2020-09-26 10:34:46,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-9
+2020-09-26 10:34:47,065 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-4
+2020-09-26 10:34:47,066 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-4
+2020-09-26 10:34:47,402 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-10
+2020-09-26 10:34:47,406 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-10
+2020-09-26 10:34:47,464 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-4
+2020-09-26 10:34:47,464 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-4
+2020-09-26 10:34:47,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-10
+2020-09-26 10:34:47,543 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-10
+2020-09-26 10:34:47,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-10
+2020-09-26 10:34:47,659 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-4
+2020-09-26 10:34:47,660 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-4
+2020-09-26 10:34:48,382 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-4
+2020-09-26 10:34:48,382 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-4
+2020-09-26 10:34:48,396 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-11
+2020-09-26 10:34:48,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-11
+2020-09-26 10:34:48,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-11
+2020-09-26 10:34:48,542 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-11
+2020-09-26 10:34:48,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-11
+2020-09-26 10:34:48,800 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-5
+2020-09-26 10:34:48,800 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-5
+2020-09-26 10:34:49,081 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-5
+2020-09-26 10:34:49,082 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-5
+2020-09-26 10:34:49,395 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-12
+2020-09-26 10:34:49,398 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-5
+2020-09-26 10:34:49,399 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-5
+2020-09-26 10:34:49,410 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-12
+2020-09-26 10:34:49,467 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-5
+2020-09-26 10:34:49,467 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-5
+2020-09-26 10:34:49,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-12
+2020-09-26 10:34:49,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-12
+2020-09-26 10:34:49,581 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-12
+2020-09-26 10:34:49,614 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-5
+2020-09-26 10:34:49,614 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-5
+2020-09-26 10:34:50,222 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-6
+2020-09-26 10:34:50,222 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-6
+2020-09-26 10:34:50,357 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-6
+2020-09-26 10:34:50,358 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-6
+2020-09-26 10:34:50,393 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-13
+2020-09-26 10:34:50,418 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-13
+2020-09-26 10:34:50,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-13
+2020-09-26 10:34:50,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-13
+2020-09-26 10:34:50,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-13
+2020-09-26 10:34:50,903 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-6
+2020-09-26 10:34:50,904 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-6
+2020-09-26 10:34:51,244 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-6
+2020-09-26 10:34:51,245 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-6
+2020-09-26 10:34:51,391 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-14
+2020-09-26 10:34:51,407 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-14
+2020-09-26 10:34:51,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-14
+2020-09-26 10:34:51,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-14
+2020-09-26 10:34:51,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-14
+2020-09-26 10:34:51,615 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-6
+2020-09-26 10:34:51,616 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-6
+2020-09-26 10:34:52,094 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-7
+2020-09-26 10:34:52,094 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-7
+2020-09-26 10:34:52,390 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-15
+2020-09-26 10:34:52,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-15
+2020-09-26 10:34:52,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-15
+2020-09-26 10:34:52,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-15
+2020-09-26 10:34:52,582 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-15
+2020-09-26 10:34:52,850 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-7
+2020-09-26 10:34:52,850 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-7
+2020-09-26 10:34:53,148 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-7
+2020-09-26 10:34:53,148 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-7
+2020-09-26 10:34:53,388 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-16
+2020-09-26 10:34:53,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-16
+2020-09-26 10:34:53,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-16
+2020-09-26 10:34:53,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-16
+2020-09-26 10:34:53,559 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-7
+2020-09-26 10:34:53,559 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-7
+2020-09-26 10:34:53,586 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-16
+2020-09-26 10:34:53,691 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-7
+2020-09-26 10:34:53,691 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-7
+2020-09-26 10:34:54,388 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-17
+2020-09-26 10:34:54,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-17
+2020-09-26 10:34:54,533 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-17
+2020-09-26 10:34:54,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-17
+2020-09-26 10:34:54,584 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-17
+2020-09-26 10:34:54,792 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-8
+2020-09-26 10:34:54,792 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-8
+2020-09-26 10:34:54,893 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-8
+2020-09-26 10:34:54,893 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-8
+2020-09-26 10:34:54,966 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-8
+2020-09-26 10:34:54,966 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-8
+2020-09-26 10:34:55,148 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-8
+2020-09-26 10:34:55,148 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-8
+2020-09-26 10:34:55,176 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-8
+2020-09-26 10:34:55,177 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-8
+2020-09-26 10:34:55,383 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-18
+2020-09-26 10:34:55,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-18
+2020-09-26 10:34:55,506 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-18
+2020-09-26 10:34:55,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-18
+2020-09-26 10:34:55,583 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-18
+2020-09-26 10:34:56,383 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-19
+2020-09-26 10:34:56,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-19
+2020-09-26 10:34:56,503 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-19
+2020-09-26 10:34:56,542 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-19
+2020-09-26 10:34:56,581 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-19
+2020-09-26 10:34:56,955 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-9
+2020-09-26 10:34:56,956 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-9
+2020-09-26 10:34:56,958 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-9
+2020-09-26 10:34:56,958 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-9
+2020-09-26 10:34:57,215 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-9
+2020-09-26 10:34:57,215 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-9
+2020-09-26 10:34:57,381 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-20
+2020-09-26 10:34:57,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-20
+2020-09-26 10:34:57,411 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-9
+2020-09-26 10:34:57,412 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-9
+2020-09-26 10:34:57,503 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-20
+2020-09-26 10:34:57,543 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-20
+2020-09-26 10:34:57,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-20
+2020-09-26 10:34:57,628 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-9
+2020-09-26 10:34:57,628 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-9
+2020-09-26 10:34:58,380 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-21
+2020-09-26 10:34:58,404 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-21
+2020-09-26 10:34:58,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-21
+2020-09-26 10:34:58,540 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-21
+2020-09-26 10:34:58,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-21
+2020-09-26 10:34:59,167 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-10
+2020-09-26 10:34:59,167 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-10
+2020-09-26 10:34:59,351 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-10
+2020-09-26 10:34:59,351 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-10
+2020-09-26 10:34:59,380 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-22
+2020-09-26 10:34:59,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-22
+2020-09-26 10:34:59,439 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-10
+2020-09-26 10:34:59,439 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-10
+2020-09-26 10:34:59,459 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-10
+2020-09-26 10:34:59,459 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-10
+2020-09-26 10:34:59,503 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-22
+2020-09-26 10:34:59,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-22
+2020-09-26 10:34:59,548 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-10
+2020-09-26 10:34:59,548 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-10
+2020-09-26 10:34:59,580 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-22
+2020-09-26 10:35:00,015 INFO o.a.j.r.Summariser: summary +   2254 in 00:00:22 =  103.7/s Avg:   309 Min:    23 Max:  1068 Err:     0 (0.00%) Active: 60 Started: 110 Finished: 50
+2020-09-26 10:35:00,378 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-23
+2020-09-26 10:35:00,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-23
+2020-09-26 10:35:00,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-23
+2020-09-26 10:35:00,540 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-23
+2020-09-26 10:35:00,581 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-23
+2020-09-26 10:35:00,945 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-11
+2020-09-26 10:35:00,945 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-11
+2020-09-26 10:35:01,096 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-11
+2020-09-26 10:35:01,096 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-11
+2020-09-26 10:35:01,377 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-24
+2020-09-26 10:35:01,402 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-11
+2020-09-26 10:35:01,402 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-11
+2020-09-26 10:35:01,417 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-24
+2020-09-26 10:35:01,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-24
+2020-09-26 10:35:01,552 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-24
+2020-09-26 10:35:01,581 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-24
+2020-09-26 10:35:01,746 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-11
+2020-09-26 10:35:01,746 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-11
+2020-09-26 10:35:02,050 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-11
+2020-09-26 10:35:02,050 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-11
+2020-09-26 10:35:02,375 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-25
+2020-09-26 10:35:02,420 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-25
+2020-09-26 10:35:02,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-25
+2020-09-26 10:35:02,551 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-25
+2020-09-26 10:35:02,583 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-25
+2020-09-26 10:35:02,608 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-12
+2020-09-26 10:35:02,608 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-12
+2020-09-26 10:35:03,375 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-26
+2020-09-26 10:35:03,409 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-26
+2020-09-26 10:35:03,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-26
+2020-09-26 10:35:03,552 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-26
+2020-09-26 10:35:03,583 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-26
+2020-09-26 10:35:03,593 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-12
+2020-09-26 10:35:03,593 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-12
+2020-09-26 10:35:03,599 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-12
+2020-09-26 10:35:03,599 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-12
+2020-09-26 10:35:03,683 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-12
+2020-09-26 10:35:03,683 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-12
+2020-09-26 10:35:04,294 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-12
+2020-09-26 10:35:04,294 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-12
+2020-09-26 10:35:04,374 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-27
+2020-09-26 10:35:04,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-27
+2020-09-26 10:35:04,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-27
+2020-09-26 10:35:04,558 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-27
+2020-09-26 10:35:04,584 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-27
+2020-09-26 10:35:04,641 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-13
+2020-09-26 10:35:04,642 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-13
+2020-09-26 10:35:04,750 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-13
+2020-09-26 10:35:04,750 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-13
+2020-09-26 10:35:05,196 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-13
+2020-09-26 10:35:05,196 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-13
+2020-09-26 10:35:05,371 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-28
+2020-09-26 10:35:05,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-28
+2020-09-26 10:35:05,422 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-13
+2020-09-26 10:35:05,422 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-13
+2020-09-26 10:35:05,474 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-13
+2020-09-26 10:35:05,474 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-13
+2020-09-26 10:35:05,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-28
+2020-09-26 10:35:05,540 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-28
+2020-09-26 10:35:05,582 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-28
+2020-09-26 10:35:05,916 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-14
+2020-09-26 10:35:05,916 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-14
+2020-09-26 10:35:06,371 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-29
+2020-09-26 10:35:06,405 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-29
+2020-09-26 10:35:06,501 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-29
+2020-09-26 10:35:06,541 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-29
+2020-09-26 10:35:06,582 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-29
+2020-09-26 10:35:07,268 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-14
+2020-09-26 10:35:07,268 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-14
+2020-09-26 10:35:07,368 INFO o.a.j.t.JMeterThread: Thread started: UC5 1-30
+2020-09-26 10:35:07,399 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-14
+2020-09-26 10:35:07,399 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-14
+2020-09-26 10:35:07,408 INFO o.a.j.t.JMeterThread: Thread started: UC7 2-30
+2020-09-26 10:35:07,502 INFO o.a.j.t.JMeterThread: Thread started: UC3 3-30
+2020-09-26 10:35:07,540 INFO o.a.j.t.JMeterThread: Thread started: UC4 4-30
+2020-09-26 10:35:07,589 INFO o.a.j.t.JMeterThread: Thread started: UC6 5-30
+2020-09-26 10:35:07,776 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-14
+2020-09-26 10:35:07,776 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-14
+2020-09-26 10:35:07,858 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-14
+2020-09-26 10:35:07,858 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-14
+2020-09-26 10:35:07,912 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-15
+2020-09-26 10:35:07,912 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-15
+2020-09-26 10:35:08,222 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-15
+2020-09-26 10:35:08,222 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-15
+2020-09-26 10:35:09,366 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-15
+2020-09-26 10:35:09,366 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-15
+2020-09-26 10:35:09,529 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-15
+2020-09-26 10:35:09,530 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-15
+2020-09-26 10:35:09,825 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-16
+2020-09-26 10:35:09,825 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-16
+2020-09-26 10:35:10,250 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-16
+2020-09-26 10:35:10,250 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-16
+2020-09-26 10:35:10,956 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-16
+2020-09-26 10:35:10,956 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-16
+2020-09-26 10:35:11,130 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-16
+2020-09-26 10:35:11,130 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-16
+2020-09-26 10:35:11,318 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-15
+2020-09-26 10:35:11,318 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-15
+2020-09-26 10:35:11,631 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-16
+2020-09-26 10:35:11,631 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-16
+2020-09-26 10:35:12,098 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-17
+2020-09-26 10:35:12,098 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-17
+2020-09-26 10:35:12,424 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-17
+2020-09-26 10:35:12,424 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-17
+2020-09-26 10:35:12,766 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-17
+2020-09-26 10:35:12,766 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-17
+2020-09-26 10:35:12,794 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-17
+2020-09-26 10:35:12,794 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-17
+2020-09-26 10:35:13,523 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-18
+2020-09-26 10:35:13,523 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-18
+2020-09-26 10:35:13,633 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-17
+2020-09-26 10:35:13,633 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-17
+2020-09-26 10:35:14,052 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-18
+2020-09-26 10:35:14,052 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-18
+2020-09-26 10:35:14,061 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-18
+2020-09-26 10:35:14,061 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-18
+2020-09-26 10:35:14,091 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-18
+2020-09-26 10:35:14,091 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-18
+2020-09-26 10:35:14,441 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-18
+2020-09-26 10:35:14,441 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-18
+2020-09-26 10:35:15,037 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-19
+2020-09-26 10:35:15,037 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-19
+2020-09-26 10:35:15,038 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-19
+2020-09-26 10:35:15,038 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-19
+2020-09-26 10:35:15,220 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-19
+2020-09-26 10:35:15,220 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-19
+2020-09-26 10:35:15,399 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-19
+2020-09-26 10:35:15,400 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-19
+2020-09-26 10:35:15,450 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-19
+2020-09-26 10:35:15,450 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-19
+2020-09-26 10:35:16,122 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-20
+2020-09-26 10:35:16,122 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-20
+2020-09-26 10:35:16,151 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-20
+2020-09-26 10:35:16,151 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-20
+2020-09-26 10:35:16,339 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-21
+2020-09-26 10:35:16,339 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-21
+2020-09-26 10:35:16,370 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-20
+2020-09-26 10:35:16,370 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-20
+2020-09-26 10:35:16,598 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-20
+2020-09-26 10:35:16,598 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-20
+2020-09-26 10:35:16,667 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-20
+2020-09-26 10:35:16,668 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-20
+2020-09-26 10:35:16,914 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-21
+2020-09-26 10:35:16,914 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-21
+2020-09-26 10:35:17,100 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-21
+2020-09-26 10:35:17,100 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-21
+2020-09-26 10:35:17,180 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-21
+2020-09-26 10:35:17,180 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-21
+2020-09-26 10:35:17,309 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-21
+2020-09-26 10:35:17,309 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-21
+2020-09-26 10:35:17,483 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-22
+2020-09-26 10:35:17,485 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-22
+2020-09-26 10:35:18,069 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-22
+2020-09-26 10:35:18,070 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-22
+2020-09-26 10:35:18,136 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-22
+2020-09-26 10:35:18,136 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-22
+2020-09-26 10:35:18,342 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-22
+2020-09-26 10:35:18,342 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-22
+2020-09-26 10:35:18,527 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-23
+2020-09-26 10:35:18,527 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-23
+2020-09-26 10:35:18,600 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-23
+2020-09-26 10:35:18,600 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-23
+2020-09-26 10:35:18,643 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-23
+2020-09-26 10:35:18,643 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-23
+2020-09-26 10:35:18,756 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-24
+2020-09-26 10:35:18,756 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-24
+2020-09-26 10:35:18,783 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-22
+2020-09-26 10:35:18,783 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-22
+2020-09-26 10:35:18,911 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-23
+2020-09-26 10:35:18,911 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-23
+2020-09-26 10:35:19,015 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-24
+2020-09-26 10:35:19,015 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-24
+2020-09-26 10:35:19,074 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-23
+2020-09-26 10:35:19,075 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-23
+2020-09-26 10:35:19,098 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-25
+2020-09-26 10:35:19,098 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-25
+2020-09-26 10:35:19,229 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-25
+2020-09-26 10:35:19,230 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-25
+2020-09-26 10:35:19,336 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-24
+2020-09-26 10:35:19,337 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-24
+2020-09-26 10:35:19,475 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-24
+2020-09-26 10:35:19,475 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-24
+2020-09-26 10:35:19,667 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-24
+2020-09-26 10:35:19,667 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-24
+2020-09-26 10:35:19,732 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-25
+2020-09-26 10:35:19,732 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-25
+2020-09-26 10:35:19,889 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-25
+2020-09-26 10:35:19,889 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-25
+2020-09-26 10:35:19,923 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-25
+2020-09-26 10:35:19,923 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-25
+2020-09-26 10:35:19,976 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-26
+2020-09-26 10:35:19,976 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-26
+2020-09-26 10:35:19,997 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-26
+2020-09-26 10:35:19,997 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-26
+2020-09-26 10:35:20,109 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-27
+2020-09-26 10:35:20,110 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-27
+2020-09-26 10:35:20,132 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-26
+2020-09-26 10:35:20,133 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-26
+2020-09-26 10:35:20,223 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-26
+2020-09-26 10:35:20,223 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-26
+2020-09-26 10:35:20,227 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-26
+2020-09-26 10:35:20,227 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-26
+2020-09-26 10:35:20,315 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-27
+2020-09-26 10:35:20,315 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-27
+2020-09-26 10:35:20,399 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-27
+2020-09-26 10:35:20,399 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-27
+2020-09-26 10:35:20,487 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-27
+2020-09-26 10:35:20,487 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-27
+2020-09-26 10:35:20,502 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-28
+2020-09-26 10:35:20,502 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-28
+2020-09-26 10:35:20,655 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-27
+2020-09-26 10:35:20,655 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-27
+2020-09-26 10:35:20,687 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-28
+2020-09-26 10:35:20,687 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-28
+2020-09-26 10:35:20,702 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-29
+2020-09-26 10:35:20,702 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-29
+2020-09-26 10:35:20,756 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-28
+2020-09-26 10:35:20,756 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-28
+2020-09-26 10:35:20,781 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-30
+2020-09-26 10:35:20,781 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-30
+2020-09-26 10:35:20,791 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-30
+2020-09-26 10:35:20,791 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-30
+2020-09-26 10:35:20,812 INFO o.a.j.t.JMeterThread: Thread is done: UC3 3-28
+2020-09-26 10:35:20,812 INFO o.a.j.t.JMeterThread: Thread finished: UC3 3-28
+2020-09-26 10:35:20,822 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-30
+2020-09-26 10:35:20,822 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-30
+2020-09-26 10:35:20,823 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-29
+2020-09-26 10:35:20,823 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-29
+2020-09-26 10:35:20,877 INFO o.a.j.t.JMeterThread: Thread is done: UC5 1-29
+2020-09-26 10:35:20,877 INFO o.a.j.t.JMeterThread: Thread finished: UC5 1-29
+2020-09-26 10:35:20,880 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-28
+2020-09-26 10:35:20,881 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-28
+2020-09-26 10:35:20,904 INFO o.a.j.t.JMeterThread: Thread is done: UC7 2-29
+2020-09-26 10:35:20,904 INFO o.a.j.t.JMeterThread: Thread finished: UC7 2-29
+2020-09-26 10:35:20,918 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-29
+2020-09-26 10:35:20,918 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-29
+2020-09-26 10:35:20,921 INFO o.a.j.t.JMeterThread: Thread is done: UC6 5-30
+2020-09-26 10:35:20,921 INFO o.a.j.t.JMeterThread: Thread finished: UC6 5-30
+2020-09-26 10:35:20,943 INFO o.a.j.t.JMeterThread: Thread is done: UC4 4-30
+2020-09-26 10:35:20,944 INFO o.a.j.t.JMeterThread: Thread finished: UC4 4-30
+2020-09-26 10:35:20,944 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-09-26 10:35:20,945 INFO o.a.j.r.Summariser: summary +   2246 in 00:00:21 =  107.3/s Avg:   584 Min:    16 Max:  1465 Err:     0 (0.00%) Active: 0 Started: 150 Finished: 150
+2020-09-26 10:35:20,946 INFO o.a.j.r.Summariser: summary =   4500 in 00:00:43 =  105.5/s Avg:   446 Min:    16 Max:  1465 Err:     0 (0.00%)
