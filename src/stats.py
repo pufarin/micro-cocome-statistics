@@ -47,43 +47,73 @@ fieldsAsyncCallback = ['time_received', 'uuid']
 
 # api_gateway_1_to_1_db
 apg1 = get_data_from_csv_files(absolutPath, ag1to1, fields)
-#prunedApg1 = remove_outliers(apg1)
+prunedApg1 = remove_outliers(apg1)
 
-#sns.displot(prunedApg1, x="elapsed")
+# with outliers
 sns.displot(apg1, x="elapsed")
-plt.title('api_gateway_1_to_1_db ')
+plt.title('api_gateway_1_to_1_db')
+
+# no outliers
+sns.displot(prunedApg1, x="elapsed")
+plt.title('api_gateway_1_to_1_db no outliers')
+
+
 
 # api_gateway_one_db
 apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
-#prunedApgOne = remove_outliers(apgOne)
+prunedApgOne = remove_outliers(apgOne)
 
-#sns.displot(prunedApgOne, x="elapsed")
+# with outliers
 sns.displot(apgOne, x="elapsed")
 plt.title('api_gateway_one_db')
 
+# no outliers
+sns.displot(prunedApgOne, x="elapsed")
+plt.title('api_gateway_one_db no outliers')
+
+
+
 # master_1_to_1_db_distributed
 master1 = get_data_from_csv_files(absolutPath, m1to1, fields)
-#prunedMaster1 = remove_outliers(master1)
+prunedMaster1 = remove_outliers(master1)
 
-#sns.displot(prunedMaster1, x="elapsed")
+# with outliers
 sns.displot(master1, x="elapsed")
 plt.title('master_1_to_1_db')
 
+# no outliers
+sns.displot(prunedMaster1, x="elapsed")
+plt.title('master_1_to_1_db no outliers')
+
+
+
 # master_one_db_distributed
 masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
-#prunedMasterOne = remove_outliers(masterOne)
+prunedMasterOne = remove_outliers(masterOne)
 
-#sns.displot(prunedMasterOne, x="elapsed")
+# with outliers
 sns.displot(masterOne, x="elapsed")
 plt.title('master_one_db')
+
+# no outliers
+sns.displot(prunedMasterOne, x="elapsed")
+plt.title('master_one_db no outliers')
+
+
 
 # orchestrate_api_gateway_1_to_1_db_distributed
 oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
 prunedOApi1to1 = remove_outliers(oApi1to1)
 
-#sns.displot(prunedOApi1to1, x="elapsed")
+# with outliers
 sns.displot(oApi1to1, x="elapsed")
 plt.title('orchestrate_api_gateway_1_to_1_db')
+
+# no outliers
+sns.displot(prunedOApi1to1, x="elapsed")
+plt.title('orchestrate_api_gateway_1_to_1_db no outliers')
+
+
 
 # pub_sub_1_to_1_db_distributed
 pubSub1to1 = get_data_from_csv_files(absolutPath, ps1tot1, fieldsAsync)
@@ -130,6 +160,4 @@ oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPu
 
 sns.displot(oPubSub1to1Aggregate, x='total_time')
 plt.title('orchestrate_pub_sub_1_to_1_db')
-
-
-#print(oPubSub1to1Aggregate)
+plt.show()

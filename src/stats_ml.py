@@ -206,8 +206,10 @@ all_data = all_data.append(mbus1to1All, ignore_index=True).append(oApi1to1, igno
 # https://datatofish.com/correlation-matrix-pandas/
 corrMatrix = all_data.corr()
 #print(corrMatrix)
+
 # display matrix
-#sns.heatmap(corrMatrix, annot=True)
+sns.heatmap(corrMatrix, annot=True)
+plt.title('Correlation Matrix')
 #plt.show()
 
 # define the input variable and the output variable
@@ -221,11 +223,12 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random
 regression_model = LinearRegression()
 
 # fit the model
+print("Fitting the Model...")
 regression_model.fit(x_train, y_train)
 
 # grab the intercept and the coef
 intercept = regression_model.intercept_[0]
-print(intercept)
+print("The intercept: {}".format(intercept))
 
 coef = regression_model.coef_[0]
 #print(coef)
@@ -237,7 +240,9 @@ for cf in zip(x.columns, coef):
 y_predict = regression_model.predict(x_test)
 
 # show first five
+print('Show first five predictions: ')
 print(y_predict[:5])
+
 
 # EVALUATING THE MODEL https://youtu.be/UTfoj_7RU48?t=248
 # define our input
@@ -249,38 +254,45 @@ model = sm.OLS(y, x2)
 # fit the data
 est = model.fit()
 
-# testing
-_, pval, _, f_pval = diag.het_breuschpagan(est.resid, est.model.exog, robust=False)
-print(pval, f_pval) # no Heteroscedasticity
-
-# AUTOCORRELATION https://youtu.be/UTfoj_7RU48?t=799
-
-# calculate the lag
-lag = min(10, (len(x) // 5))
-# perform Ljung-Box test
-test_results = diag.acorr_ljungbox(est.resid, lags=lag)
-
-# grab the p-values and the test statistics
-ibvalue, p_val = test_results
-
-# print the results of the test
-if min(p_val) > 0.05:
-    print("The lowest p-value found was {:.4}".format(min(p_val)))
-    print("We fail to reject the null hypthoesis, so there is no autocorrelation.")
-    print('-'*100)
-else:
-    print("The lowest p-value found was {:.4}".format(min(p_val)))
-    print("We reject the null hypthoesis, so there is autocorrelation.")
-    print('-'*100)
-
-# plot autocorrelation
-#sm.graphics.tsa.plot_acf(est.resid)
-#plt.show()
-
 # check for normality of the residuals
 sm.qqplot(est.resid, line='s')
+pylab.title('QQ Plot of OLS model ')
 pylab.show()
 
-# check that the mean of the residuals is approx 0
-mean_residuals = sum(est.resid) / len(est.resid)
-print(mean_residuals)
+
+
+# # testing
+# _, pval, _, f_pval = diag.het_breuschpagan(est.resid, est.model.exog, robust=False)
+# print(pval, f_pval) # no Heteroscedasticity
+#
+# # AUTOCORRELATION https://youtu.be/UTfoj_7RU48?t=799
+#
+# # calculate the lag
+# lag = min(10, (len(x) // 5))
+# # perform Ljung-Box test
+# test_results = diag.acorr_ljungbox(est.resid, lags=lag)
+#
+# # grab the p-values and the test statistics
+# ibvalue, p_val = test_results
+#
+# # print the results of the test
+# if min(p_val) > 0.05:
+#     print("The lowest p-value found was {:.4}".format(min(p_val)))
+#     print("We fail to reject the null hypthoesis, so there is no autocorrelation.")
+#     print('-'*100)
+# else:
+#     print("The lowest p-value found was {:.4}".format(min(p_val)))
+#     print("We reject the null hypthoesis, so there is autocorrelation.")
+#     print('-'*100)
+#
+# # plot autocorrelation
+# #sm.graphics.tsa.plot_acf(est.resid)
+# #plt.show()
+#
+# # check for normality of the residuals
+# sm.qqplot(est.resid, line='s')
+# pylab.show()
+#
+# # check that the mean of the residuals is approx 0
+# mean_residuals = sum(est.resid) / len(est.resid)
+# print(mean_residuals)
