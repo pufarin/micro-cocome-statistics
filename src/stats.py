@@ -130,5 +130,6 @@ oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPu
 
 sns.displot(oPubSub1to1Aggregate, x='total_time')
 plt.title('orchestrate_pub_sub_1_to_1_db')
-plt.show()
+
+
 #print(oPubSub1to1Aggregate)
