@@ -45,76 +45,76 @@ fields = ['elapsed']
 fieldsAsync = ['timeStamp', 'uuid']
 fieldsAsyncCallback = ['time_received', 'uuid']
 
-# api_gateway_1_to_1_db
-apg1 = get_data_from_csv_files(absolutPath, ag1to1, fields)
-prunedApg1 = remove_outliers(apg1)
-
-# with outliers
-sns.displot(apg1, x="elapsed")
-plt.title('api_gateway_1_to_1_db')
-
-# no outliers
-sns.displot(prunedApg1, x="elapsed")
-plt.title('api_gateway_1_to_1_db no outliers')
-
-
-
-# api_gateway_one_db
-apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
-prunedApgOne = remove_outliers(apgOne)
-
-# with outliers
-sns.displot(apgOne, x="elapsed")
-plt.title('api_gateway_one_db')
-
-# no outliers
-sns.displot(prunedApgOne, x="elapsed")
-plt.title('api_gateway_one_db no outliers')
-
-
-
-# master_1_to_1_db_distributed
-master1 = get_data_from_csv_files(absolutPath, m1to1, fields)
-prunedMaster1 = remove_outliers(master1)
-
-# with outliers
-sns.displot(master1, x="elapsed")
-plt.title('master_1_to_1_db')
-
-# no outliers
-sns.displot(prunedMaster1, x="elapsed")
-plt.title('master_1_to_1_db no outliers')
-
-
-
-# master_one_db_distributed
-masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
-prunedMasterOne = remove_outliers(masterOne)
-
-# with outliers
-sns.displot(masterOne, x="elapsed")
-plt.title('master_one_db')
-
-# no outliers
-sns.displot(prunedMasterOne, x="elapsed")
-plt.title('master_one_db no outliers')
-
-
-
-# orchestrate_api_gateway_1_to_1_db_distributed
-oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
-prunedOApi1to1 = remove_outliers(oApi1to1)
-
-# with outliers
-sns.displot(oApi1to1, x="elapsed")
-plt.title('orchestrate_api_gateway_1_to_1_db')
-
-# no outliers
-sns.displot(prunedOApi1to1, x="elapsed")
-plt.title('orchestrate_api_gateway_1_to_1_db no outliers')
-
-
-
+# # api_gateway_1_to_1_db
+# apg1 = get_data_from_csv_files(absolutPath, ag1to1, fields)
+# prunedApg1 = remove_outliers(apg1)
+#
+# # with outliers
+# sns.displot(apg1, x="elapsed")
+# plt.title('api_gateway_1_to_1_db')
+#
+# # no outliers
+# sns.displot(prunedApg1, x="elapsed")
+# plt.title('api_gateway_1_to_1_db no outliers')
+#
+#
+#
+# # api_gateway_one_db
+# apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
+# prunedApgOne = remove_outliers(apgOne)
+#
+# # with outliers
+# sns.displot(apgOne, x="elapsed")
+# plt.title('api_gateway_one_db')
+#
+# # no outliers
+# sns.displot(prunedApgOne, x="elapsed")
+# plt.title('api_gateway_one_db no outliers')
+#
+#
+#
+# # master_1_to_1_db_distributed
+# master1 = get_data_from_csv_files(absolutPath, m1to1, fields)
+# prunedMaster1 = remove_outliers(master1)
+#
+# # with outliers
+# sns.displot(master1, x="elapsed")
+# plt.title('master_1_to_1_db')
+#
+# # no outliers
+# sns.displot(prunedMaster1, x="elapsed")
+# plt.title('master_1_to_1_db no outliers')
+#
+#
+#
+# # master_one_db_distributed
+# masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
+# prunedMasterOne = remove_outliers(masterOne)
+#
+# # with outliers
+# sns.displot(masterOne, x="elapsed")
+# plt.title('master_one_db')
+#
+# # no outliers
+# sns.displot(prunedMasterOne, x="elapsed")
+# plt.title('master_one_db no outliers')
+#
+#
+#
+# # orchestrate_api_gateway_1_to_1_db_distributed
+# oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
+# prunedOApi1to1 = remove_outliers(oApi1to1)
+#
+# # with outliers
+# sns.displot(oApi1to1, x="elapsed")
+# plt.title('orchestrate_api_gateway_1_to_1_db')
+#
+# # no outliers
+# sns.displot(prunedOApi1to1, x="elapsed")
+# plt.title('orchestrate_api_gateway_1_to_1_db no outliers')
+#
+#
+#
 # pub_sub_1_to_1_db_distributed
 pubSub1to1 = get_data_from_csv_files(absolutPath, ps1tot1, fieldsAsync)
 pubSub1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(ps1tot1, callBack), fieldsAsyncCallback)
@@ -124,40 +124,41 @@ pubSub1to1Aggregate['total_time'] = pubSub1to1Aggregate['time_received'] - pubSu
 #pubSub1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeData.csv', encoding='utf-8', index=False)
 sns.displot(pubSub1to1Aggregate, x='total_time')
 plt.title('pub_sub_1_to_1_db_distributed')
-
-# pub_sub_one_db_distributed
-pubSubOne = get_data_from_csv_files(absolutPath, psOne, fieldsAsync)
-pubSubOneCallback = get_data_from_csv(absolutPath, get_callback_dir(psOne, callBack), fieldsAsyncCallback)
-
-pubSubOneAggregate = pubSubOne.join(pubSubOneCallback.set_index('uuid'), on='uuid')
-pubSubOneAggregate['total_time'] = pubSubOneAggregate['time_received'] - pubSubOneAggregate['timeStamp']
-
-sns.displot(pubSubOneAggregate, x='total_time')
-plt.title('pub_sub_one_db_distributed')
-
-# message_bus_1_to_1_db_distributed
-
-mbus1to1 = get_data_from_csv_files(absolutPath, mb1to1, fieldsAsync)
-mbus1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(mb1to1, callBack), fieldsAsyncCallback)
-
-mbus1to1Aggregate = mbus1to1Callback.join(mbus1to1.set_index('uuid'), on='uuid')
-#mbus1to1Aggregate = mbus1to1.join(mbus1to1Callback.set_index('uuid'), on='uuid')
-mbus1to1Aggregate['total_time'] = mbus1to1Aggregate['time_received'] - mbus1to1Aggregate['timeStamp']
-
-mbus1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeDataMB1.csv', encoding='utf-8', index=False)
-
-sns.displot(mbus1to1Aggregate, x='total_time')
-plt.title('message_bus_1_to_1_db_distributed')
-#print(mbus1to1Aggregate)
-
-# orchestrate_pub_sub_1_to_1_db
-
-oPubSub1to1 = get_data_from_csv_files(absolutPath, opb1to1, fieldsAsync)
-oPubSub1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(opb1to1, callBack), fieldsAsyncCallback)
-
-oPubSub1to1Aggregate = oPubSub1to1Callback.join(oPubSub1to1.set_index('uuid'), on='uuid')
-oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPubSub1to1Aggregate['timeStamp']
-
-sns.displot(oPubSub1to1Aggregate, x='total_time')
-plt.title('orchestrate_pub_sub_1_to_1_db')
 plt.show()
+#
+# # pub_sub_one_db_distributed
+# pubSubOne = get_data_from_csv_files(absolutPath, psOne, fieldsAsync)
+# pubSubOneCallback = get_data_from_csv(absolutPath, get_callback_dir(psOne, callBack), fieldsAsyncCallback)
+#
+# pubSubOneAggregate = pubSubOne.join(pubSubOneCallback.set_index('uuid'), on='uuid')
+# pubSubOneAggregate['total_time'] = pubSubOneAggregate['time_received'] - pubSubOneAggregate['timeStamp']
+#
+# sns.displot(pubSubOneAggregate, x='total_time')
+# plt.title('pub_sub_one_db_distributed')
+#
+# # message_bus_1_to_1_db_distributed
+#
+# mbus1to1 = get_data_from_csv_files(absolutPath, mb1to1, fieldsAsync)
+# mbus1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(mb1to1, callBack), fieldsAsyncCallback)
+#
+# mbus1to1Aggregate = mbus1to1Callback.join(mbus1to1.set_index('uuid'), on='uuid')
+# #mbus1to1Aggregate = mbus1to1.join(mbus1to1Callback.set_index('uuid'), on='uuid')
+# mbus1to1Aggregate['total_time'] = mbus1to1Aggregate['time_received'] - mbus1to1Aggregate['timeStamp']
+#
+# mbus1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeDataMB1.csv', encoding='utf-8', index=False)
+#
+# sns.displot(mbus1to1Aggregate, x='total_time')
+# plt.title('message_bus_1_to_1_db_distributed')
+# #print(mbus1to1Aggregate)
+#
+# # orchestrate_pub_sub_1_to_1_db
+#
+# oPubSub1to1 = get_data_from_csv_files(absolutPath, opb1to1, fieldsAsync)
+# oPubSub1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(opb1to1, callBack), fieldsAsyncCallback)
+#
+# oPubSub1to1Aggregate = oPubSub1to1Callback.join(oPubSub1to1.set_index('uuid'), on='uuid')
+# oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPubSub1to1Aggregate['timeStamp']
+#
+# sns.displot(oPubSub1to1Aggregate, x='total_time')
+# plt.title('orchestrate_pub_sub_1_to_1_db')
+# plt.show()
