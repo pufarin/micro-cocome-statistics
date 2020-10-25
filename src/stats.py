@@ -50,16 +50,16 @@ fieldsAsync = ['timeStamp', 'uuid']
 fieldsAsyncCallback = ['time_received', 'uuid']
 
 # # api_gateway_1_to_1_db
-# apg1 = get_data_from_csv_files(absolutPath, ag1to1, fields)
-# prunedApg1 = remove_outliers(apg1)
-#
-# # with outliers
-# sns.displot(apg1, x="elapsed")
-# plt.title('api_gateway_1_to_1_db')
-#
-# # no outliers
-# sns.displot(prunedApg1, x="elapsed")
-# plt.title('api_gateway_1_to_1_db no outliers')
+apg1 = get_data_from_csv_files(absolutPath, ag1to1, fields)
+prunedApg1 = remove_outliers(apg1)
+
+# with outliers
+sns.displot(apg1, x="elapsed")
+plt.title('api_gateway_1_to_1_db')
+
+# no outliers
+sns.displot(prunedApg1, x="elapsed")
+plt.title('api_gateway_1_to_1_db no outliers')
 #
 #
 #
