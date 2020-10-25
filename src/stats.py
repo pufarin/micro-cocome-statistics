@@ -23,6 +23,10 @@ def remove_outliers(data_frame):
     z = np.abs(stats.zscore(data_frame['elapsed']))
     return data_frame[(z < 3)]
 
+def remove_outliersPubSub(data_frame):
+    z = np.abs(stats.zscore(data_frame['total_time']))
+    return data_frame[(z < 3)]
+
 
 def get_callback_dir(dir_name, call_back):
     return r'{}\{}'.format(dir_name, call_back)
@@ -124,17 +128,28 @@ pubSub1to1Aggregate['total_time'] = pubSub1to1Aggregate['time_received'] - pubSu
 #pubSub1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeData.csv', encoding='utf-8', index=False)
 sns.displot(pubSub1to1Aggregate, x='total_time')
 plt.title('pub_sub_1_to_1_db_distributed')
+
+prunedPubSub1to1 = remove_outliersPubSub(pubSub1to1Aggregate)
+sns.displot(prunedPubSub1to1, x='total_time')
+plt.title('pub_sub_1_to_1_db_distributed_no_outliers')
+
+
+
+# pub_sub_one_db_distributed
+pubSubOne = get_data_from_csv_files(absolutPath, psOne, fieldsAsync)
+pubSubOneCallback = get_data_from_csv(absolutPath, get_callback_dir(psOne, callBack), fieldsAsyncCallback)
+
+pubSubOneAggregate = pubSubOne.join(pubSubOneCallback.set_index('uuid'), on='uuid')
+pubSubOneAggregate['total_time'] = pubSubOneAggregate['time_received'] - pubSubOneAggregate['timeStamp']
+
+sns.displot(pubSubOneAggregate, x='total_time')
+plt.title('pub_sub_one_db_distributed')
+
+prunedPubSubOne = remove_outliersPubSub(pubSubOneAggregate)
+sns.displot(prunedPubSub1to1, x='total_time')
+plt.title('pub_sub_one_db_distributed_no_outliers')
+
 plt.show()
-#
-# # pub_sub_one_db_distributed
-# pubSubOne = get_data_from_csv_files(absolutPath, psOne, fieldsAsync)
-# pubSubOneCallback = get_data_from_csv(absolutPath, get_callback_dir(psOne, callBack), fieldsAsyncCallback)
-#
-# pubSubOneAggregate = pubSubOne.join(pubSubOneCallback.set_index('uuid'), on='uuid')
-# pubSubOneAggregate['total_time'] = pubSubOneAggregate['time_received'] - pubSubOneAggregate['timeStamp']
-#
-# sns.displot(pubSubOneAggregate, x='total_time')
-# plt.title('pub_sub_one_db_distributed')
 #
 # # message_bus_1_to_1_db_distributed
 #
