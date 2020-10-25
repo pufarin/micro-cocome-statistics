@@ -149,21 +149,26 @@ prunedPubSubOne = remove_outliersPubSub(pubSubOneAggregate)
 sns.displot(prunedPubSub1to1, x='total_time')
 plt.title('pub_sub_one_db_distributed_no_outliers')
 
+# message_bus_1_to_1_db_distributed
+
+mbus1to1 = get_data_from_csv_files(absolutPath, mb1to1, fieldsAsync)
+mbus1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(mb1to1, callBack), fieldsAsyncCallback)
+
+mbus1to1Aggregate = mbus1to1Callback.join(mbus1to1.set_index('uuid'), on='uuid')
+#mbus1to1Aggregate = mbus1to1.join(mbus1to1Callback.set_index('uuid'), on='uuid')
+mbus1to1Aggregate['total_time'] = mbus1to1Aggregate['time_received'] - mbus1to1Aggregate['timeStamp']
+
+#mbus1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeDataMB1.csv', encoding='utf-8', index=False)
+
+sns.displot(mbus1to1Aggregate, x='total_time')
+plt.title('message_bus_1_to_1_db_distributed')
+
+prunedMbus1to1 = remove_outliersPubSub(mbus1to1Aggregate)
+sns.displot(prunedMbus1to1, x='total_time')
+plt.title('message_bus_1_to_1_db_distributed_no_outliers')
+
 plt.show()
-#
-# # message_bus_1_to_1_db_distributed
-#
-# mbus1to1 = get_data_from_csv_files(absolutPath, mb1to1, fieldsAsync)
-# mbus1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(mb1to1, callBack), fieldsAsyncCallback)
-#
-# mbus1to1Aggregate = mbus1to1Callback.join(mbus1to1.set_index('uuid'), on='uuid')
-# #mbus1to1Aggregate = mbus1to1.join(mbus1to1Callback.set_index('uuid'), on='uuid')
-# mbus1to1Aggregate['total_time'] = mbus1to1Aggregate['time_received'] - mbus1to1Aggregate['timeStamp']
-#
-# mbus1to1Aggregate.to_csv('C:\\Users\\gabriel\\Desktop\\completeDataMB1.csv', encoding='utf-8', index=False)
-#
-# sns.displot(mbus1to1Aggregate, x='total_time')
-# plt.title('message_bus_1_to_1_db_distributed')
+
 # #print(mbus1to1Aggregate)
 #
 # # orchestrate_pub_sub_1_to_1_db
