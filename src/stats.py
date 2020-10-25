@@ -167,18 +167,21 @@ prunedMbus1to1 = remove_outliersPubSub(mbus1to1Aggregate)
 sns.displot(prunedMbus1to1, x='total_time')
 plt.title('message_bus_1_to_1_db_distributed_no_outliers')
 
-plt.show()
 
 # #print(mbus1to1Aggregate)
-#
-# # orchestrate_pub_sub_1_to_1_db
-#
-# oPubSub1to1 = get_data_from_csv_files(absolutPath, opb1to1, fieldsAsync)
-# oPubSub1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(opb1to1, callBack), fieldsAsyncCallback)
-#
-# oPubSub1to1Aggregate = oPubSub1to1Callback.join(oPubSub1to1.set_index('uuid'), on='uuid')
-# oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPubSub1to1Aggregate['timeStamp']
-#
-# sns.displot(oPubSub1to1Aggregate, x='total_time')
-# plt.title('orchestrate_pub_sub_1_to_1_db')
-# plt.show()
+# orchestrate_pub_sub_1_to_1_db
+
+oPubSub1to1 = get_data_from_csv_files(absolutPath, opb1to1, fieldsAsync)
+oPubSub1to1Callback = get_data_from_csv(absolutPath, get_callback_dir(opb1to1, callBack), fieldsAsyncCallback)
+
+oPubSub1to1Aggregate = oPubSub1to1Callback.join(oPubSub1to1.set_index('uuid'), on='uuid')
+oPubSub1to1Aggregate['total_time'] = oPubSub1to1Aggregate['time_received'] - oPubSub1to1Aggregate['timeStamp']
+
+sns.displot(oPubSub1to1Aggregate, x='total_time')
+plt.title('orchestrate_pub_sub_1_to_1_db')
+
+prunedOPubSub1to1 = remove_outliersPubSub(oPubSub1to1Aggregate)
+sns.displot(prunedOPubSub1to1, x='total_time')
+plt.title('orchestrate_pub_sub_1_to_1_db_no_outliers')
+
+plt.show()
