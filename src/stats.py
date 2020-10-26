@@ -60,10 +60,9 @@ plt.title('api_gateway_1_to_1_db')
 # no outliers
 sns.displot(prunedApg1, x="elapsed")
 plt.title('api_gateway_1_to_1_db no outliers')
-#
-#
-#
-# # api_gateway_one_db
+
+
+# api_gateway_one_db
 apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
 prunedApgOne = remove_outliers(apgOne)
 
@@ -74,24 +73,20 @@ plt.title('api_gateway_one_db')
 # no outliers
 sns.displot(prunedApgOne, x="elapsed")
 plt.title('api_gateway_one_db no outliers')
-#
-#
-#
-# # master_1_to_1_db_distributed
-# master1 = get_data_from_csv_files(absolutPath, m1to1, fields)
-# prunedMaster1 = remove_outliers(master1)
-#
-# # with outliers
-# sns.displot(master1, x="elapsed")
-# plt.title('master_1_to_1_db')
-#
-# # no outliers
-# sns.displot(prunedMaster1, x="elapsed")
-# plt.title('master_1_to_1_db no outliers')
-#
-#
-#
-# # master_one_db_distributed
+
+# master_1_to_1_db_distributed
+master1 = get_data_from_csv_files(absolutPath, m1to1, fields)
+prunedMaster1 = remove_outliers(master1)
+
+# with outliers
+sns.displot(master1, x="elapsed")
+plt.title('master_1_to_1_db')
+
+# no outliers
+sns.displot(prunedMaster1, x="elapsed")
+plt.title('master_1_to_1_db no outliers')
+
+# master_one_db_distributed
 # masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
 # prunedMasterOne = remove_outliers(masterOne)
 #
