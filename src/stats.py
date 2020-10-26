@@ -87,19 +87,18 @@ sns.displot(prunedMaster1, x="elapsed")
 plt.title('master_1_to_1_db no outliers')
 
 # master_one_db_distributed
-# masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
-# prunedMasterOne = remove_outliers(masterOne)
-#
-# # with outliers
-# sns.displot(masterOne, x="elapsed")
-# plt.title('master_one_db')
-#
-# # no outliers
-# sns.displot(prunedMasterOne, x="elapsed")
-# plt.title('master_one_db no outliers')
-#
-#
-#
+masterOne = get_data_from_csv_files(absolutPath, mOne, fields)
+prunedMasterOne = remove_outliers(masterOne)
+
+# with outliers
+sns.displot(masterOne, x="elapsed")
+plt.title('master_one_db')
+
+# no outliers
+sns.displot(prunedMasterOne, x="elapsed")
+plt.title('master_one_db no outliers')
+
+
 # # orchestrate_api_gateway_1_to_1_db_distributed
 oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
 prunedOApi1to1 = remove_outliers(oApi1to1)
