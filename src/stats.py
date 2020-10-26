@@ -64,16 +64,16 @@ plt.title('api_gateway_1_to_1_db no outliers')
 #
 #
 # # api_gateway_one_db
-# apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
-# prunedApgOne = remove_outliers(apgOne)
-#
-# # with outliers
-# sns.displot(apgOne, x="elapsed")
-# plt.title('api_gateway_one_db')
-#
-# # no outliers
-# sns.displot(prunedApgOne, x="elapsed")
-# plt.title('api_gateway_one_db no outliers')
+apgOne = get_data_from_csv_files(absolutPath, agOne, fields)
+prunedApgOne = remove_outliers(apgOne)
+
+# with outliers
+sns.displot(apgOne, x="elapsed")
+plt.title('api_gateway_one_db')
+
+# no outliers
+sns.displot(prunedApgOne, x="elapsed")
+plt.title('api_gateway_one_db no outliers')
 #
 #
 #
