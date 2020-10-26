@@ -106,18 +106,17 @@ plt.title('api_gateway_one_db no outliers')
 #
 #
 # # orchestrate_api_gateway_1_to_1_db_distributed
-# oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
-# prunedOApi1to1 = remove_outliers(oApi1to1)
-#
-# # with outliers
-# sns.displot(oApi1to1, x="elapsed")
-# plt.title('orchestrate_api_gateway_1_to_1_db')
-#
-# # no outliers
-# sns.displot(prunedOApi1to1, x="elapsed")
-# plt.title('orchestrate_api_gateway_1_to_1_db no outliers')
-#
-#
+oApi1to1 = get_data_from_csv_files(absolutPath, oAg1to1, fields)
+prunedOApi1to1 = remove_outliers(oApi1to1)
+
+# with outliers
+sns.displot(oApi1to1, x="elapsed")
+plt.title('orchestrate_api_gateway_1_to_1_db')
+
+# no outliers
+sns.displot(prunedOApi1to1, x="elapsed")
+plt.title('orchestrate_api_gateway_1_to_1_db no outliers')
+
 #
 # pub_sub_1_to_1_db_distributed
 pubSub1to1 = get_data_from_csv_files(absolutPath, ps1tot1, fieldsAsync)
