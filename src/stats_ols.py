@@ -217,12 +217,34 @@ all_data = all_data.append(apgOne, ignore_index=True).append(pubSub1to1All, igno
 all_data = all_data.append(mbus1to1All, ignore_index=True).append(oApi1to1, ignore_index=True).append(oPubSub1to1All,
                                                                                                       ignore_index=True)
 
-all_data_log = np.sqrt(all_data['elapsed'])
 
-sns.displot(all_data_log)
+x = all_data.drop('elapsed', axis=1)
+y = all_data[['elapsed']]
+
+x = sm.add_constant(x)
+est = sm.OLS(y, x).fit()
+print(est.summary())
+
+# all_data_no_cbs = all_data.drop(['cbs_rest', 'cbs_db', 'cbs_messaging'], axis=1)
+#
+# x = all_data_no_cbs.drop('elapsed', axis=1)
+# y = all_data_no_cbs[['elapsed']]
+#
+# x = sm.add_constant(x)
+# est = sm.OLS(y, x).fit()
+# print(est.summary())
+
+# # check for normality of the residuals
+sm.qqplot(est.resid, line='s')
+pylab.title('QQ Plot of OLS model ')
+pylab.show()
+
+#all_data_log = np.sqrt(all_data['elapsed'])
+
+#sns.displot(all_data_log)
 #sns.displot(all_data, x="elapsed")
 # plt.hist(all_data['elapsed'])
-plt.show()
+#plt.show()
 # from fitter import Fitter
 # f = Fitter(all_data['elapsed'], timeout=60)
 # f.fit()
