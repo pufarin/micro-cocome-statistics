@@ -32,3 +32,9 @@
 | v07     | 0        | 0      | 1             | 1   | 0         | 1          | 0           | 1                |              |
 | v09     | 1        | 0      | 0             | 1   | 1         | 0          | 1           | 0                |              |
 | v10     | 0        | 0      | 1             | 1   | 0         | 1          | 0           | 1                |              |
+
+## How to run the code
+* Have Python 3 running on your machine
+* Download the github repo onto your machine
+* Change the value of the __absolutPath__ to the path of the measurements dir on your machine
+* you should be able to run the scripts
