@@ -1,0 +1,43 @@
+\documentclass{report}
+\usepackage{booktabs}
+\begin{document}\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}    &     elapsed      & \textbf{  R-squared:         } &      0.585   \\
+\textbf{Model:}            &       OLS        & \textbf{  Adj. R-squared:    } &      0.585   \\
+\textbf{Method:}           &  Least Squares   & \textbf{  F-statistic:       } &  3.764e+04   \\
+\textbf{Date:}             & Sun, 17 Jan 2021 & \textbf{  Prob (F-statistic):} &      0.00    \\
+\textbf{Time:}             &     19:54:06     & \textbf{  Log-Likelihood:    } & -6.8676e+05  \\
+\textbf{No. Observations:} &      187225      & \textbf{  AIC:               } &  1.374e+06   \\
+\textbf{Df Residuals:}     &      187217      & \textbf{  BIC:               } &  1.374e+06   \\
+\textbf{Df Model:}         &           7      & \textbf{                     } &              \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                           & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{const}             &   -6.606e+09  &      2.2e+11     &    -0.030  &         0.976        &    -4.38e+11    &     4.25e+11     \\
+\textbf{cbs\_rest}         &    -1.01e+10  &     2.15e+11     &    -0.047  &         0.963        &    -4.32e+11    &     4.12e+11     \\
+\textbf{cbs\_db}           &    -1.01e+10  &     2.15e+11     &    -0.047  &         0.963        &    -4.32e+11    &     4.12e+11     \\
+\textbf{cbs\_messaging}    &    -1.01e+10  &     2.15e+11     &    -0.047  &         0.963        &    -4.32e+11    &     4.12e+11     \\
+\textbf{apg}               &    8.335e+11  &     5.82e+11     &     1.432  &         0.152        &    -3.07e+11    &     1.97e+12     \\
+\textbf{cbca\_sync}        &     1.67e+10  &     4.57e+10     &     0.365  &         0.715        &    -7.29e+10    &     1.06e+11     \\
+\textbf{cbca\_async}       &   -3.912e+11  &      2.8e+11     &    -1.397  &         0.162        &     -9.4e+11    &     1.57e+11     \\
+\textbf{cbapgs\_rest}      &   -8.335e+11  &     5.82e+11     &    -1.432  &         0.152        &    -1.97e+12    &     3.07e+11     \\
+\textbf{cbapgs\_messaging} &   -4.255e+11  &     3.05e+11     &    -1.395  &         0.163        &    -1.02e+12    &     1.72e+11     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 72005.671 & \textbf{  Durbin-Watson:     } &     1.651   \\
+\textbf{Prob(Omnibus):} &    0.000  & \textbf{  Jarque-Bera (JB):  } & 482917.044  \\
+\textbf{Skew:}          &    1.704  & \textbf{  Prob(JB):          } &      0.00   \\
+\textbf{Kurtosis:}      &   10.091  & \textbf{  Cond. No.          } &  1.13e+15   \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified. \newline
+ [2] The smallest eigenvalue is 4.19e-25. This might indicate that there are \newline
+ strong multicollinearity problems or that the design matrix is singular.\end{document}

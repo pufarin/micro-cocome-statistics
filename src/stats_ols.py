@@ -225,6 +225,22 @@ x = sm.add_constant(x)
 est = sm.OLS(y, x).fit()
 print(est.summary())
 
+
+predict = est.predict(x)
+print(predict)
+print(x)
+# save to latex doc -> https://economics.stackexchange.com/questions/11774/outputting-regressions-as-table-in-python-similar-to-outreg-in-stata
+
+beginningtex = """\\documentclass{report}
+\\usepackage{booktabs}
+\\begin{document}"""
+endtex = "\end{document}"
+
+f = open('ols_table.tex', 'w')
+f.write(beginningtex)
+f.write(est.summary().as_latex())
+f.write(endtex)
+f.close()
 # all_data_no_cbs = all_data.drop(['cbs_rest', 'cbs_db', 'cbs_messaging'], axis=1)
 #
 # x = all_data_no_cbs.drop('elapsed', axis=1)
@@ -235,9 +251,9 @@ print(est.summary())
 # print(est.summary())
 
 # # check for normality of the residuals
-sm.qqplot(est.resid, line='s')
-pylab.title('QQ Plot of OLS model ')
-pylab.show()
+#sm.qqplot(est.resid, line='s')
+#pylab.title('QQ Plot of OLS model ')
+#pylab.show()
 
 #all_data_log = np.sqrt(all_data['elapsed'])
 
