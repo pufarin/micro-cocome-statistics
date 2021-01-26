@@ -6,6 +6,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import operator as op
 
+from matplotlib.cbook import boxplot_stats
+
 
 def get_data_from_csv(absolut_path, dir_name, column_names):
     path = r'{}/{}/*.csv'.format(absolut_path, dir_name)
@@ -121,9 +123,9 @@ data_dict = {'v01': prunedMaster1['elapsed'], 'v02': prunedMasterOne['elapsed'],
 dd = pd.DataFrame(data=data_dict)
 
 PROPS = {
-    'boxprops':{'facecolor':'none', 'edgecolor':'blue'},
-    'medianprops':{'color':'red'},
-    'whiskerprops':{'color':'black'}
+    'boxprops': {'facecolor': 'none', 'edgecolor': 'blue'},
+    'medianprops': {'color': 'red'},
+    'whiskerprops': {'color': 'black'}
 }
 
 plt.rcParams['figure.figsize'] = (15.0, 12.0)
@@ -134,5 +136,23 @@ plt.xticks(size=30)
 plt.yticks(size=30)
 plt.savefig('BoxPlot', bbox_inches='tight')
 
+# https://stackoverflow.com/questions/23461713/obtaining-values-used-in-boxplot-using-python-and-matplotlib
+def get_box_plot_data(labels, bp):
+    rows_list = []
+
+    for i in range(len(labels)):
+        dict1 = {}
+        dict1['label'] = labels[i]
+        dict1['lower_whisker'] = bp['whiskers'][i * 2].get_ydata()[1]
+        dict1['lower_quartile'] = bp['boxes'][i].get_ydata()[1]
+        dict1['median'] = bp['medians'][i].get_ydata()[1]
+        dict1['upper_quartile'] = bp['boxes'][i].get_ydata()[2]
+        dict1['upper_whisker'] = bp['whiskers'][(i * 2) + 1].get_ydata()[1]
+        rows_list.append(dict1)
+
+    return pd.DataFrame(rows_list)
 
 
+labels = ['v01', 'v02', 'v03', 'v04', 'v05', 'v06', 'v07', 'v09', 'v10']
+bp = plt.boxplot(data_dict.values(), labels=labels)
+print(get_box_plot_data(labels, bp))
