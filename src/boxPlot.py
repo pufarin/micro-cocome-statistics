@@ -115,7 +115,7 @@ prunedOPubSub1to1 = remove_outliersPubSub(oPubSub1to1Aggregate)
 
 
 data_dict = {'v01': prunedMaster1['elapsed'], 'v02': prunedMasterOne['elapsed'], 'v03': prunedApg1['elapsed'],
-             'v04': prunedApgOne['elapsed'], 'v05': prunedOPubSub1to1['total_time'],
+             'v04': prunedApgOne['elapsed'], 'v05': prunedPubSub1to1['total_time'],
              'v06': prunedPubSubOne['total_time'],
              'v07': prunedMbus1to1['total_time'], 'v09': prunedOApi1to1['elapsed'],
              'v10': prunedOPubSub1to1['total_time']}
